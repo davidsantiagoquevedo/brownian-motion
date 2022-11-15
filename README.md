@@ -3,7 +3,7 @@ This repository contains:
 
 1. A finite elements simulation implemented in c++ for the brownian motion exhibit by a particle confined in a two dimensional gas.
 
-For running the simulations + a basic animation made in gnuplot run:
+To run the simulations plus a basic animation made in gnuplot run:
 
 <code> ./scripts/2d-gas/main.o 1 -> ./results/animation.dat </code>
 
