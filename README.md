@@ -6,6 +6,7 @@ This repository contains:
 For running the simulations + a basic animation made in gnuplot run:
 
 <code> ./scripts/2d-gas/main.o 1 -> ./results/animation.dat </code>
+
 <code> gnuplot ./results/animation.dat </code>
 
 The analysis of the simulated data is performed in python using pandas and pystan. 
