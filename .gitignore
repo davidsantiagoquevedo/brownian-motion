@@ -1,0 +1,15 @@
+# Jupyter checkpoints
+.ipynb_checkpoints
+
+# R histories and data
+*.Rhistory
+*.RData
+
+# Byte-compiled
+__pycache__/
+
+# VS Code files
+.vscode/*
+
+# C++ libraries (may change)
+*.h
