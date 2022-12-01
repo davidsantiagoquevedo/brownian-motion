@@ -1,16 +1,31 @@
-# 2 dimensional brownian motion
-This repository contains:
+# Brownian motion
 
-1. A finite elements simulation implemented in c++ for the brownian motion exhibit by a particle confined in a two dimensional gas.
+## Two dimensional gas
+
+Finite elements simulation implemented in c++ for the brownian motion exhibit by a particle confined in a two dimensional gas.
+
 
 To run the simulations plus a basic animation made in gnuplot run:
 
-<code> ./scripts/2d-gas/main.o 1 -> ./results/animation.dat </code>
+<code> ./2d-gas/gnu_plot_animation.py </code>
 
-<code> gnuplot ./results/animation.dat </code>
+To run the simulations for analysis run:
+
+<code> ./2d-gas/run_simulations.py </code>
+
+flag = 'e': gets the whole ensemble information
+
+flag = 'r': gets the random path
 
 The analysis of the simulated data is performed in python using pandas and pystan. 
 
-A basic animation runs in gnuplot and the animation of the 
 
-2. (Soon) A stochastic simulation performed in python to replicate the behavior of the system based in the analytical treatment of browian motion.
+## Results
+
+### 2d-Gas animation
+![Alt Text](2d-gas/figures/2d-gas.gif)
+
+### Random walk
+![Alt Text](2d-gas/figures/random_walk.gif)
+
+*(Soon) Stochastic simulation performed in python to replicate the behavior of the system based in the analytical treatment of browian motion.*
