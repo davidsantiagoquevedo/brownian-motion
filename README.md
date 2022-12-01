@@ -28,4 +28,4 @@ The analysis of the simulated data is performed in python using pandas and pysta
 ### Random walk
 ![Alt Text](2d-gas/figures/random_walk.gif)
 
-*(Soon) Stochastic simulation performed in python to replicate the behavior of the system based in the analytical treatment of browian motion.*
+*(Soon) Stochastic simulation performed in python to replicate the behavior of the system based in the analytical treatment of brownian motion.*
