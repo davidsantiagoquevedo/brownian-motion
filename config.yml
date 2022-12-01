@@ -1,0 +1,15 @@
+default:
+  EXTENSIONS: 
+    - ".csv"
+    - ".xlsx"
+    - ".xlsx"
+    - ".txt"
+  PATHS:
+    OUT_PATH : "./{dir}/outputs/"
+    FIG_PATH : "./{dir}/figures/"
+    SCRIPTS_PATH : "./{dir}/scripts/"
+    UTILS_PATH : "./{dir}/scripts/"
+    PLOT_PATH : "./plot_scripts/"
+    PLOT_STYLE : "./plot_scripts/plot_style.mplstyle"
+  SIMULATION:
+    ENSEMBLES: 1
