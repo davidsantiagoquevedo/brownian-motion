@@ -8,9 +8,7 @@ import subprocess
 import yaml
 import time
 
-ymlfile = open("config.yml", "r")
-cfg = yaml.load(ymlfile)
-config = cfg["default"]
+config = yaml.safe_load(open("config.yml", "r"))["default"]
 
 OUT_PATH = config['PATHS']['OUT_PATH'].format(dir = '2d-gas')
 FIG_PATH = config['PATHS']['FIG_PATH'].format(dir = '2d-gas')
