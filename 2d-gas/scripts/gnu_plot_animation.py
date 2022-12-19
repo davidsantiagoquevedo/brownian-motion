@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Thr Dec 1 2022
-
 @author: davidsantiagoquevedo
 """
 import subprocess
