@@ -1,39 +1,31 @@
 # -*- coding: utf-8 -*-
 """
 Created on Thr Dec 1 2022
-
 @author: davidsantiagoquevedo
 """
 import subprocess
+import sys
 import yaml
 import time
 import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib.animation import PillowWriter
 
-ymlfile = open("config.yml", "r")
-cfg = yaml.load(ymlfile)
-config = cfg["default"]
+config = yaml.safe_load(open("config.yml", "r"))["default"]
 
 OUT_PATH = config['PATHS']['OUT_PATH'].format(dir = '2d-gas')
 FIG_PATH = config['PATHS']['FIG_PATH'].format(dir = '2d-gas')
 SCRIPTS_PATH = config['PATHS']['SCRIPTS_PATH'].format(dir = '2d-gas')
+UTILS_PATH = config['PATHS']['UTILS_PATH'].format(dir = '2d-gas')
+
+sys.path.append(UTILS_PATH)
+import utils as ut
 
 an_step = 100
 t0 = time.time()
 datContent = [i.strip().split() for i in open(f'{OUT_PATH}/random_walk0.dat').readlines()]
 
-def process_dat(datContent):
-    df = pd.DataFrame(datContent)
-    df[['x','y','vx','vy']] = df[0].str.split(",", n = 3, expand = True)
-    df['x'] = pd.to_numeric(df['x'])
-    df['y'] = pd.to_numeric(df['y'])
-    df['vx'] = pd.to_numeric(df['vx'])
-    df['vy'] = pd.to_numeric(df['vy'])
-    df = df[['x','y','vx','vy']]
-    return df
-
-df_data = process_dat(datContent)
+df_data = ut.process_dat(datContent)
 df_data['x_diff'] = df_data.x.diff()
 df_data['y_diff'] = df_data.y.diff()
 ###################################################
